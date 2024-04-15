@@ -1,0 +1,8 @@
+attendance,pattendance,comfort,pcomfort,mood,pmood,notes,,,,
+0,A,1,A,3,A,,,,,behavior and phase  variables
+0.29,A,4,A,2,A,,,,,
+0.14,A,2,A,2,A,holiday week senior center open only 5 days,,,notes including,
+0.2,A,2,A,1,A,,,,critical incidences,
+NA,NA,NA,NA,NA,NA,,NA - denotes phase changes,,,
+,,,,,,,1- must be uppercase NA,, ,
+,,,,,,,2 - N/A is not accepted,,,
