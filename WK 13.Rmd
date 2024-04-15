@@ -23,13 +23,13 @@ When you click the **Knit** button a document will be generated that includes bo
 
 ## Slide with R Output
 
-```{r cars, echo = TRUE}
+```{r cars, echo=TRUE}
 summary(cars)
 ```
 
 ## Slide with Plot
 
-```{r pressure}
+```{r pressure, echo=TRUE}
 plot(pressure)
 ```
 
