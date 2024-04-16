@@ -1,0 +1,56 @@
+---
+title: "WK13 Lecture Notes"
+author: "Alvaro Gomez, Ph.D."
+date: "`r Sys.Date()`"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+Analyzing Data with R and the SSDforR library
+============================================
+
+When working with R Studio to analyze single subject research data, there are a few steps you need to do to prepare the R environment.
+
+1. Create an R project
+2. Load SSDforR
+```{r load-SSDforR-library, include=FALSE}
+require(SSDforR)
+```
+3. Import the the Excel data file
+```{r load-Excel-csv-file, echo=FALSE}
+Getcsv()
+```
+A dialogue window will open and you can locate the .csv file
+4. Once the file is imported into R, you will need to attach the file.
+```{r attach-ssd, include=FALSE}
+attach(ssd)
+```
+SSD for R supports the full-range of analysis that can be conducted with single-subject research data. A brief overview of these functions are described here.
+- **Basic graphing functions** — these include a set of commands that will allow you to make and label a variety of graphs, draw vertical lines between phases, and note critical incidences. Graphs include, among other things, simple line graphs (with or without mean or median lines), standard deviation graphs, and graphs showing interquartile ranges. These graphs can be exported in a number of different formats.
+- **Functions associated with descriptive and basic statistics** — these include basic descriptive statistics including mean, median, standard deviations, and quartiles. Also available are effect sizes and basic regression.
+- **Functions associated with statistical process control (SPC) charts** — these include X-R-charts, R-charts, p-charts, X-mr-charts, and c-charts. Again, all charts and graphs can be exported in a variety of formats.
+- **Functions associated with autocorrelation and data transformations** — these are appropriate for calculating and dealing with issues of autocorrelation, which are unique to time-series research designs.
+- **Functions associated with hypothesis testing** — these enable users to test whether there are statistically significant differences between two or more phases. Available tests include t-tests, chi-square, ANOVA, binomial, and conservative dual criteria.
+- **Functions appropriate for analyzing group data** — these are suitable for analyzing group data, including variation of individuals’ behaviors within a group.
+- **Functions suitable for community or system-wide data** — these functions are used to examine large amounts of data across phases and are typically used in time-series research that may go beyond the scope of one client or client group.
+
+is is an R Markdown document. Markdown is a simple formatting syntax for authoring HTML, PDF, and MS Word documents. For more details on using R Markdown see <http://rmarkdown.rstudio.com>.
+
+When you click the **Knit** button a document will be generated that includes both content as well as the output of any embedded R code chunks within the document. You can embed an R code chunk like this:
+
+```{r cars}
+summary(cars)
+```
+
+## Including Plots
+
+You can also embed plots, for example:
+
+```{r pressure, echo=FALSE}
+plot(pressure)
+```
+
+Note that the `echo = FALSE` parameter was added to the code chunk to prevent printing of the R code that generated the plot.
