@@ -18,3 +18,4 @@ browseURL(StandardCelerationChart)
 OgdenLindsley <- "http://precisionteaching.pbworks.com/w/page/18241059/Ogden%20Lindsley%20(1922-2004)"
 browseURL(OgdenLindsley)
 
+# EXAMPLE DATA: A CASE STUDY JENNY
