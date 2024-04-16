@@ -9,8 +9,7 @@ output: html_document
 knitr::opts_chunk$set(echo = TRUE)
 ```
 
-Analyzing Data with R and the SSDforR library
-============================================
+# Analyzing Data with R and the SSDforR library
 
 When working with R Studio to analyze single subject research data, there are a few steps you need to do to prepare the R environment.
 
