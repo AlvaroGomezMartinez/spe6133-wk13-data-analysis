@@ -17,3 +17,6 @@ abline(v = c(mean_val - sd_val, mean_val + sd_val), col = "green", lwd = 2, lty 
 
 # Add +2 & -2 standard deviation lines
 abline(v = c(mean_val - 2 * sd_val, mean_val + 2 * sd_val), col = "purple", lwd = 2, lty = 2, label = "2SD")
+
+# Add +3 & -3 standard deviation lines
+abline(v = c(mean_val - 3 * sd_val, mean_val + 3 * sd_val), col = "orange", lwd = 3, lty = 2, label = "3SD")
