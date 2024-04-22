@@ -1,4 +1,4 @@
-# Analyzing Baseline Data
+# Analyzing Baseline Data with Statistics
 
 require(SSDforR) #loads the SSDforR package
 
@@ -50,6 +50,28 @@ Aregres(cry,pcry,"A")
 # A visual inspection of the data from the graph indicates that the crying behavior has a stronger linear relationship with time compared to Jenny’s yelling behavior as the data points are clustered more tightly around the regression line. As the estimate of 0.4121 for x1 indicates, the number of crying episodes increases by 0.4121 for each unit increase in time and the slope is statistically significant. Part of the objective of an intervention, then, may be to reverse the increasing trend for both yelling and crying displayed in the baseline.
 
 ABplot(callout,pcallout,"Day","Number of calling out per day","Jenny's Calling Out") # Creates an x-y line graph for 'Callout".
+
+# Using percentage of Non-Overlapping Data (PND) to determine effect size
+# We're going to need a dataset that has baseline and intervention data.
+detach(ssd) # Detach the current dataframe
+Getcsv() # Get the AB data frame named JennyAB.csv
+attach(ssd) # Attach the ssd dataframe
+
+names(ssd) # Look at the names of the variables. Let's use esteem for this example.
+ABplot(esteem,pesteem,"Session","Behavior","Jenny's Esteem")
+# Since the intervention data is above the baseline data, let's use PND above
+PNDabove(esteem,pesteem,"A","B") # We see the plot and we also get the percentage in the Console. PND above = 0.75 as PND above which is moderate effectiveness
+
+# Next, let's look at the callout behavior.
+# Plot PND Below
+PNDbelow(callout,pcallout,"A","B") # PND below is 0.08 which statistically is not effective.
+# Plot PND Above
+PNDabove(callout,pcallout,"A","B") # PND above is 0, again statistically not effective. Taking both of these statistics into account, we can make a determination that the intervention is not effective, however, to be more certain let's visually analyze the data to get another perspective.
+ABplot(callout,pcallout,"Session","Behavior","Jenny's Callout")
+# It appears that the intervention behavior is attempting to decrease the behavior. This plot shows us that even though the statistics for both PND below and PND above determined that the intervention was not effective, we can see that it is definitely decreasing the behavior and even though we didn't have a jump down, we still have an effect. Let's see if the slope in the behavior is statistically significant. Let's test the regression line.
+Aregres(callout,pcallout,"B")
+# If we look at the plot, we can see that the data points are close to the regression line. Other than the fifth point, the rest of them are very close to the line. If we look at the statistics in the Console we see that the Pr(>|t|) has *** meaning that the results are less than 0.05 which gives us great confidence. Also, the adjusted R-squared value of 0.9327 indicates that 93.27% of the variability in the response variable is explained by the predictor variable x1. This gives us great confidence that the treatment is effective and the slope is statistically significant.
+# 
 
 # SUMMARY OF FUNCTIONS AVAILABLE ON THE SSDforR PACKAGE
 # SSD for R supports the full-range of analysis that can be conducted with single-subject research data. A brief overview of these functions are described here.
