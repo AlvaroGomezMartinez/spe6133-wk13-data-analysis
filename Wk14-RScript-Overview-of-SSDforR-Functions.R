@@ -1,6 +1,7 @@
 # Analyzing Baseline Data with Statistics
 
 require(SSDforR) #loads the SSDforR package
+library(formatR) #loads the formatR package for formatting R code
 
 ?ABrf2 # Obtain help with this function
 # Lag-1 autocorrelation - Testing for autocorrelation at lag-1 is important in time series analysis because it helps to identify whether there is a pattern in the data where each data point is related to the immediately preceding data point. Autocorrelation can impact the reliability of statistical analyses, such as regression models, and can affect the validity of time series forecasts.
@@ -16,11 +17,11 @@ names(ssd) # Lists the variables included in the ssd dataframe
 
 summary(ssd) # Provides descriptive statistics (min, max, quartiles, mean for numerical values and frequencies for factors) for the entire database
 
-ABplot(yell,pyell,"Day","Number of yells per day","Jenny's Yelling") # Creates an x-y line graph for 'yell"
+ABplot(yell, pyell, "Day", "Number of yells per day","Jenny's Yelling") # Creates an x-y line graph for 'yell"
 # First determine if the behavior is typical. Do this by determining how the events vary around the mean or median.
-ABstat(yell,pyell,"A","mean") # Follow the instructions in the Console
+ABstat(yell, pyell, "A", "mean") # Follow the instructions in the Console
 ABtext("Mean = 2.8") # Label the mean line
-ABstat(yell,pyell,"A","median") # Follow the instructions in the Console
+ABstat(yell, pyell, "A", "median") # Follow the instructions in the Console
 ABtext("Median = 2") # Label the median line
 # We can now see that the points in the graph vary widely from the mean and median. The sixth point is the furthest below the mean and median while points ten, twelve, and thirteen are the furthest above.
 
@@ -98,3 +99,5 @@ browseURL(StandardCelerationChart) # Site with information on Standard Celeratio
 
 OgdenLindsley <- "http://precisionteaching.pbworks.com/w/page/18241059/Ogden%20Lindsley%20(1922-2004)"
 browseURL(OgdenLindsley) # Site with information on Ogden Lindsley
+
+tidy_source()
