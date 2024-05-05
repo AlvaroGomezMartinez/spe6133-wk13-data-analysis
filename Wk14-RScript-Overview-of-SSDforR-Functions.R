@@ -82,6 +82,7 @@ Aregres(callout, pcallout, "B")
 # Functions Associated with Hypothesis Testing — these enable users to test whether there are statistically significant differences between two or more phases. Available tests include t-tests, chi-square, ANOVA, binomial, and conservative dual criteria.
 # Functions Appropriate for Analyzing Group Data — these are suitable for analyzing group data, including variation of individuals’ behaviors within a group.
 # Functions Suitable for Community or System-wide Data — these functions are used to examine large amounts of data across phases and are typically used in time-series research that may go beyond the scope of one client or client group.
+detach(ssd)
 
 # Reference these windows for the lecture recording:
 ssdAnalysis <- "https://ssdanalysis.com/videos"
